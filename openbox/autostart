@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+## Kill if already running
+killall -9 xfsettingsd picom polybar dunst xfce4-power-manager
+
+## Restore Wallpaper
+nitrogen --restore
+
+## xfce4-settings daemon
+xfsettingsd &
+
+## polkit agent
+if [[ ! `pidof xfce-polkit` ]]; then
+	/usr/lib/xfce-polkit/xfce-polkit &
+fi
+
+## Enable power management
+xfce4-power-manager &
+
+##Compositing Manager
+exec picom &
+
+##Barra del sistema
+bash ~/.config/polybar/launch.sh
+
+## Notification Daemon
+exec dunst &
+
+## Thunar Daemon
+exec thunar --daemon &
+
+## Enable Super Keys For Menu
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &

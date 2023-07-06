@@ -42,10 +42,10 @@ workspaces() {
 		#let name++
 	#done
 	
-	##Monitores ordenados de izquierda a derecha DELL - ASUS - SAMSUMG
-	bspc monitor DP-1   -n monitor0 -d '1' '2' '3' '4'
+	##Monitores ordenados de izquierda a derecha SAMSUMG - ASUS - DELL
+	bspc monitor HDMI-1   -n monitor0 -d '1' '2' '3' '4'
 	bspc monitor HDMI-0 -n monitor1 -d '5' '6' '7' '8'
-	bspc monitor HDMI-1 -n monitor2 -d '9' '10' '11' '12'
+	bspc monitor DP-1 -n monitor2 -d '9' '10' '11' '12'
 }
 
 workspaces

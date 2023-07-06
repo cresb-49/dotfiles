@@ -36,8 +36,8 @@ launch_bar() {
 	mon3=HDMI-1 #SAMSUMG
 	#Ejecucion con la variable de entorno MONITOR
 	MONITOR=$mon2 polybar -q main -c "$DIR"/config.ini &
-	MONITOR=$mon1 polybar -q left -c "$DIR"/config.ini &
-	MONITOR=$mon3 polybar -q rigth -c "$DIR"/config.ini &
+	MONITOR=$mon3 polybar -q left -c "$DIR"/config.ini &
+	MONITOR=$mon1 polybar -q rigth -c "$DIR"/config.ini &
 }
 
 # Execute functions

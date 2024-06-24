@@ -25,6 +25,7 @@ if [ $opcion -eq 1 ]; then
     echo "2) BSPWM"
     read -p "Opción: " entorno
     if [ $entorno -eq 1 ]; then
+    
         echo "Instalando configuraciones de Openbox..."
         if [$tipo -eq 1]; then
             
